@@ -1,13 +1,13 @@
 [features]
 seeds = false
-[programs.localnet]
-solana_movies = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+[programs.devnet]
+solana_movies = "D2uXeWxmqYMFcdLiCQcJBRpMRfVV8eVH84jSxH5y8iD1"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "/Users/glopez/.config/solana/id.json"
 
 [scripts]
