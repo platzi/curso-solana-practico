@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import Link from "next/link";
+import React, { useEffect } from "react";
 
+function MyApp({ Component, pageProps }) {
   return (
     <div>
       <main>
