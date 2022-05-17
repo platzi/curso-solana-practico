@@ -3,6 +3,27 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
+  const checkIfWalletIsConnected = async () => {
+    const { solana } = window;
+
+    if (solana) {
+      if (solana.isPhantom) {
+        console.log("Phantom wallet was found");
+      }
+    } else {
+      console.log("Phatom wallet wasn't found");
+    }
+  };
+
+  useEffect(() => {
+    const onLoad = async () => {
+      await checkIfWalletIsConnected();
+    };
+
+    window.addEventListener("load", onLoad);
+    return () => window.removeEventListener("load", onLoad);
+  }, []);
+
   return (
     <div>
       <main>
